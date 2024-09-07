@@ -28,7 +28,7 @@ share/python-wheels/
 MANIFEST
 
 #azure_function venv
-azure_function/
+Azure Function/azure_function
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
