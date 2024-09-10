@@ -4,8 +4,8 @@
 #include <WiFiClient.h>
 
 // Configurações do Wi-Fi
-const char* ssid = "o nome do seu wifi"; // Insira o nome da sua rede Wi-Fi
-const char* password = "a senha do seu wifi"; // Insira a senha da sua rede Wi-Fi
+const char* ssid = "Barros01"; // Insira o nome da sua rede Wi-Fi
+const char* password = "bobtijuca"; // Insira a senha da sua rede Wi-Fi
 
 // Configurações do DHT11
 #define DHTPIN D4
@@ -13,7 +13,7 @@ const char* password = "a senha do seu wifi"; // Insira a senha da sua rede Wi-F
 DHT dht(DHTPIN, DHTTYPE);
 
 // URL da Azure Function (atualize com a URL correta da sua função)
-const char* serverName = "sua url da function";
+const char* serverName = "http://iot-estacio-dev.azurewebsites.net/api/saveNodeMCUdata?code=fmmq1d_WsQNz5mg5jMIjgrogbFmjo314k14FktzmYHK9AzFuj8bALw%3D%3D";
 
 // Criar um cliente WiFi
 WiFiClient wifiClient;
@@ -65,7 +65,7 @@ void loop() {
   }
 
   // Esperar antes de enviar novos dados
-  delay(180000); // Enviar a cada 60 segundos (1 minuto)
+  delay(300000); // Enviar a cada 60 segundos (1 minuto)
 }
 
 // Função para obter a hora atual (simples placeholder, precisa de NTP ou outro serviço para data/hora precisa)
