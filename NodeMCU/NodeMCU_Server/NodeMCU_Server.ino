@@ -4,8 +4,8 @@
 #include <WiFiClient.h>
 
 // Configurações do Wi-Fi
-const char* ssid = "Barros01"; // Insira o nome da sua rede Wi-Fi
-const char* password = "bobtijuca"; // Insira a senha da sua rede Wi-Fi
+const char* ssid = "SUA REDE WIFI"; // Insira o nome da sua rede Wi-Fi
+const char* password = "SUA SENHA WIFI"; // Insira a senha da sua rede Wi-Fi
 
 // Configurações do DHT11
 #define DHTPIN D4
@@ -13,7 +13,7 @@ const char* password = "bobtijuca"; // Insira a senha da sua rede Wi-Fi
 DHT dht(DHTPIN, DHTTYPE);
 
 // URL da Azure Function (atualize com a URL correta da sua função)
-const char* serverName = "http://iot-estacio-dev.azurewebsites.net/api/saveNodeMCUdata?code=fmmq1d_WsQNz5mg5jMIjgrogbFmjo314k14FktzmYHK9AzFuj8bALw%3D%3D";
+const char* serverName = "URL DA FUNCTION EM PROTOCOLO HTTP - PRECISA SER HTTP POR QUE O NODEMCU NÃO TEM COMO AUTENTICAR A CHAMADA";
 
 // Criar um cliente WiFi
 WiFiClient wifiClient;
